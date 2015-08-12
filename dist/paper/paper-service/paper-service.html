@@ -1,0 +1,14 @@
+<paper-service definition>
+    <template>
+        <content></content>
+    </template>
+</paper-service>
+<script>
+    Elliptical(function () {
+        $.element('paper-service', {
+            _initElement: function () {
+                this.element[0].service=this.service;
+            }
+        });
+    });
+</script>

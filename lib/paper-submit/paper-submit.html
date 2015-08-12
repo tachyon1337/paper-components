@@ -1,0 +1,47 @@
+<link rel="import" href="../../polymer/paper-button/paper-button.html">
+<style>
+    paper-submit{
+        display:inline-block;
+        border-radius:3px;
+    }
+    paper-submit paper-button {
+        padding:0;
+        margin:0;
+    }
+    paper-submit paper-button .content.paper-button {
+        padding:0;
+    }
+    paper-submit paper-button button {
+        padding: 0.81em 0.57em;
+        background-color: transparent;
+        border-color: transparent;
+    }
+    paper-submit paper-button button::-moz-focus-inner {
+        border: 0;
+    }
+</style>
+<dom-module id="paper-submit">
+    <template>
+        <paper-button>
+            <button>
+                <content></content>
+            </button>
+        </paper-button>
+    </template>
+</dom-module>
+<script>
+
+    (function() {
+
+        Polymer({
+
+            is: 'paper-submit',
+
+            ready:function(){
+                
+            }
+
+        });
+
+    })();
+</script>
