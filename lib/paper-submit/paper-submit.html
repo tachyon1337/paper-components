@@ -19,10 +19,11 @@
     paper-submit paper-button button::-moz-focus-inner {
         border: 0;
     }
+
 </style>
 <dom-module id="paper-submit">
     <template>
-        <paper-button>
+        <paper-button id="submitButton">
             <button>
                 <content></content>
             </button>
@@ -37,8 +38,18 @@
 
             is: 'paper-submit',
 
+            listeners: {
+                'submitButton.tap':'_onClick'
+            },
+
+
             ready:function(){
-                
+
+            },
+
+            _onClick:function(){
+                var button=$(this).find('button');
+                button.click();
             }
 
         });
